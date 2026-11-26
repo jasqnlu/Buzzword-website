@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Buzzword: AP and B style checks for Google Docs</title>
+  <meta name="description" content="Buzzword is a Chrome extension that checks Burlingame B story drafts in Google Docs against AP style and The B's house style. Rules only, no AI, no server.">
+  <meta name="theme-color" content="#f5b301">
+  <link rel="icon" href="/assets/buzz-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/buzz-icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/assets/buzz-icon-512.png">
+  <meta property="og:title" content="Buzzword">
+  <meta property="og:description" content="AP and Burlingame B style checks for Google Docs drafts, as suggestions you accept or reject.">
+  <meta property="og:image" content="/assets/screenshot-1280x800.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/buzz-icon.svg" alt="" width="42" height="42"><span>Buzzword</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-hide" href="#what-it-checks">What it checks</a>
+      <a href="#how-to-use">How to use</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>A style check for B stories, right inside Google Docs.</h1>
+        <p class="lede">Buzzword reads your draft and checks it against AP style and The Burlingame B's house style. Easy fixes show up as normal Docs suggestions. Anything that needs a person gets a short note explaining why.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://chromewebstore.google.com/detail/djdagkcdbdfonpfhhabflpdedgemkdnp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#fff"/><circle cx="12" cy="12" r="4.2" fill="#e0262d" stroke="#111" stroke-width="1.6"/><path d="M12 7.8h8.6M8.4 14.1 4 6.6M15.6 14.1 11.4 21.6" stroke="#111" stroke-width="1.6" fill="none"/></svg>
+            Add to Chrome
+          </a>
+          <a class="quiet" href="/privacy">Read the privacy policy</a>
+        </div>
+        <p class="store-note">Free, and made for staff of The Burlingame B. The store listing is unlisted, so you'll need this link to find it.</p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg class="flight" viewBox="0 0 600 200" preserveAspectRatio="none">
+          <path d="M10 190 C 120 120, 160 210, 260 150 S 420 40, 520 70"/>
+        </svg>
+
+        <svg class="bee hero-bee" viewBox="0 0 160 140">
+          <defs><clipPath id="hero-body-clip"><ellipse cx="86" cy="80" rx="34" ry="25"/></clipPath></defs>
+          <g class="bee-wings">
+            <g transform="rotate(26 100 62)"><ellipse class="wing wing-back" cx="100" cy="42" rx="12" ry="20"/></g>
+            <g transform="rotate(-20 82 62)"><ellipse class="wing wing-front" cx="82" cy="38" rx="14" ry="24"/></g>
+          </g>
+          <g transform="rotate(-10 86 80)">
+            <path class="bee-stinger" d="M118 77 L131 81 L118 86 Z"/>
+            <ellipse class="bee-fill" cx="86" cy="80" rx="34" ry="25"/>
+            <g clip-path="url(#hero-body-clip)">
+              <rect class="bee-stripe" x="84" y="50" width="10" height="60"/>
+              <rect class="bee-stripe" x="103" y="50" width="9" height="60"/>
+            </g>
+            <ellipse class="bee-outline" cx="86" cy="80" rx="34" ry="25"/>
+          </g>
+          <g>
+            <path class="bee-antenna" d="M46 52 Q41 37 30 35"/>
+            <path class="bee-antenna" d="M57 51 Q62 36 74 34"/>
+            <circle class="bee-ink" cx="30" cy="35" r="3"/>
+            <circle class="bee-ink" cx="74" cy="34" r="3"/>
+            <circle class="bee-fill bee-outline-thick" cx="52" cy="68" r="20"/>
+            <circle class="bee-ink" cx="45" cy="65" r="3.4"/>
+            <circle class="bee-ink" cx="58" cy="64" r="3.4"/>
+            <circle class="bee-shine" cx="46.2" cy="63.8" r="1.1"/>
+            <circle class="bee-shine" cx="59.2" cy="62.8" r="1.1"/>
+            <ellipse class="bee-cheek" cx="40" cy="73" rx="3.6" ry="2.2"/>
+            <ellipse class="bee-cheek" cx="64" cy="72" rx="3.6" ry="2.2"/>
+            <path class="bee-line" d="M47 74 Q52 79 57 73.5"/>
+          </g>
+          <g transform="translate(30 124) rotate(-42)">
+            <path class="bee-ink" d="M0 0 L17 -6.5 L17 6.5 Z"/>
+            <line class="pen-slit" x1="3" y1="0" x2="12" y2="0"/>
+            <circle class="pen-hole" cx="12.5" cy="0" r="1.7"/>
+            <rect class="bee-ink" x="17" y="-5" width="9" height="10" rx="1"/>
+            <rect class="pen-band" x="26" y="-5.6" width="3.2" height="11.2"/>
+            <rect class="bee-ink" x="29" y="-5.6" width="44" height="11.2" rx="2.5"/>
+            <circle class="pen-badge" cx="81" cy="0" r="9.5"/>
+            <text class="pen-b" x="81" y="0" transform="rotate(42 81 0)">B</text>
+          </g>
+          <g>
+            <path class="bee-line-thick" d="M60 87 Q58 95 63.5 97.5"/>
+            <path class="bee-line-thick" d="M86 103 Q84 94 76.5 88.5"/>
+            <circle class="bee-ink" cx="63.5" cy="97.5" r="3.6"/>
+            <circle class="bee-ink" cx="76.5" cy="88.5" r="3.6"/>
+          </g>
+        </svg>
+
+        <div class="draft">
+          <div class="draft-label"><span>Jazz Festival draft</span><span>Checked by Buzzword</span></div>
+          <p>The first performance starts at <span class="flag">8:30</span>, and performances run until <del>6pm</del><ins>6 p.m.</ins></p>
+          <p>The ensemble has been rehearsing for <del>over</del> <ins>more than</ins> two months, said junior Sam Ortega.</p>
+          <div class="draft-card">
+            <span class="tag">AP</span>
+            <strong>Morning or evening?</strong><br>
+            This time doesn't say a.m. or p.m. <span class="fix">Add a.m. or p.m.</span>
+            <div class="acts"><span>Why?</span><span>Find in doc</span><span>Ignore</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <figure class="shot-figure" style="margin:0">
+        <div class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="/assets/screenshot-1280x800.png" width="1280" height="800"
+               alt="A Google Docs article draft with the Buzzword panel open on the right. The doc shows green suggestions such as 6pm changed to 6 p.m. The panel says it added 5 suggestions and lists 2 things that need the writer, starting with a card titled Morning or evening.">
+        </div>
+        <figcaption>Buzzword adds safe fixes to the doc as suggestions and lists the rest in its panel. The names in this sample story are made up.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-honey" id="what-it-checks">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Two kinds of fixes</h2>
+        <p>Some style fixes are always right. Others depend on what you meant. Buzzword handles them differently.</p>
+      </div>
+
+      <div class="split">
+        <article class="kind kind-auto">
+          <h3>Safe fixes become suggestions</h3>
+          <p>Dates, times, numbers and state names that are always written one way get added as regular Google Docs suggestions. Accept or reject them like any other edit.</p>
+          <ul class="swaps">
+            <li><del>6pm</del> <ins>6 p.m.</ins> <small>Times</small></li>
+            <li><del>November 24</del> <ins>Nov. 24</ins> <small>Dates</small></li>
+          </ul>
+        </article>
+
+        <article class="kind kind-you">
+          <h3>Judgment calls become cards</h3>
+          <p>If a fix depends on context, like whether 8:30 is morning or evening, Buzzword leaves your text alone. It adds a card to its panel with a short <strong>Why?</strong> note, a button to find the spot in your doc, and an option to ignore it.</p>
+          <ul class="swaps">
+            <li>Times with no a.m. or p.m. <small>AP</small></li>
+            <li>"Burlingame High School" where just "Burlingame" will do <small>The B</small></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="facts">
+        <div>
+          <h3>Rules, not AI</h3>
+          <p>Every check is a written rule. Nothing is sent to an AI model, and the same draft gets the same results every time.</p>
+        </div>
+        <div>
+          <h3>Only the story body</h3>
+          <p>It checks the text between the "Article Draft" heading and the "Otter link + Notes" section of The B's template. The header table and your source notes are never read or changed.</p>
+        </div>
+        <div>
+          <h3>No means no</h3>
+          <p>Reject a suggestion or ignore a card and Buzzword won't bring it up again on that document.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-to-use">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>How to use it</h2>
+        <p>Install Buzzword once, then run it whenever a draft is ready for a pass.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Open your draft</h3><p>Open a story that uses The B's Article Draft template in Google Docs.</p></li>
+        <li><h3>Click the bee</h3><p>Buzz sits in the bottom-right corner of the doc. Click it to open the panel.</p></li>
+        <li><h3>Pick what to check</h3><p>Choose <strong>Check whole story</strong>, or select a paragraph and choose <strong>Check selection</strong>.</p></li>
+        <li><h3>Review the fixes</h3><p>Accept or reject the suggestions in the doc, and work through the cards in the panel.</p></li>
+        <li><h3>Check again</h3><p>Run it once more to confirm everything's clean. Rejected fixes stay gone.</p></li>
+      </ol>
+      <p style="margin-top:2rem;font-size:1rem">The first time, Google will ask you to let Buzzword read and suggest edits to your Docs. That's how it adds suggestions.</p>
+    </div>
+  </section>
+
+  <section class="section section-ink" id="privacy">
+    <div class="wrap glance">
+      <div>
+        <h2>Your drafts stay yours</h2>
+        <ul>
+          <li>Your text is checked <strong>inside your browser</strong>.</li>
+          <li>It's sent to <strong>only one place: Google's Docs API</strong>, to add suggestions to the same doc.</li>
+          <li>There's <strong>no Buzzword server</strong>, no analytics, and no selling or sharing of data.</li>
+          <li>Buzzword saves settings, document IDs, suggestion IDs, <strong>hashes</strong> of flags you rejected or ignored, and accept/reject counts per rule. <strong>It never saves your document text.</strong></li>
+          <li>This website has no analytics or tracking either.</li>
+        </ul>
+        <a class="btn btn-honey" href="/privacy">Read the full privacy policy</a>
+      </div>
+
+      <div class="table-scroll">
+        <table class="perm">
+          <caption>What each permission is for</caption>
+          <thead><tr><th scope="col">Permission</th><th scope="col">Why Buzzword needs it</th></tr></thead>
+          <tbody>
+            <tr><td><code>identity</code></td><td>Google sign-in, so Buzzword can call the Docs API for you. Scope: <code>auth/documents</code>.</td></tr>
+            <tr><td><code>storage</code></td><td>Saves your settings, plus the document IDs, suggestion IDs and hashes described here.</td></tr>
+            <tr><td><code>clipboardRead</code></td><td>Fallback for <strong>Check selection</strong> when Docs doesn't share your selection. Only when you click.</td></tr>
+            <tr><td><code>clipboardWrite</code></td><td><strong>Show in doc</strong> copies the flagged phrase so you can find it with Cmd+F or Ctrl+F.</td></tr>
+            <tr><td><code>docs.googleapis.com</code></td><td>Reads your draft and adds suggestions through Google's Docs API.</td></tr>
+            <tr><td><code>docs.google.com/document/d/*</code></td><td>Shows the bee button and panel on Google Docs documents.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="support">
+    <div class="wrap support">
+      <img src="/assets/buzz-icon.svg" alt="" width="144" height="144">
+      <div>
+        <h2>Found a bug or a wrong rule?</h2>
+        <p>Open an issue on GitHub. Include the rule name from the card and the sentence it flagged (with names changed if it's an unpublished story).</p>
+        <a class="btn btn-small" href="https://github.com/jasqnlu/Buzzword/issues">Open an issue on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <img class="logo-b" src="/assets/burlingame-b-logo.jpg" alt="The Burlingame B logo" width="72" height="72">
+    <div>
+      <p>Made by a student on the staff of The Burlingame B, Burlingame High School's student newspaper.</p>
+      <p class="fine">Buzzword is not made by, affiliated with or endorsed by The Associated Press.</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="/privacy">Privacy policy</a>
+      <a href="/support">Support</a>
+      <a href="https://github.com/jasqnlu/Buzzword">Source code</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
