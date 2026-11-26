@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Buzzword privacy policy</title>
+  <meta name="description" content="How the Buzzword Chrome extension handles your Google Docs text: checked in your browser, sent only to Google's Docs API, never saved.">
+  <meta name="theme-color" content="#f5b301">
+  <link rel="icon" href="/assets/buzz-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/buzz-icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/assets/buzz-icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/buzz-icon.svg" alt="" width="42" height="42"><span>Buzzword</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-hide" href="/#what-it-checks">What it checks</a>
+      <a href="/#how-to-use">How to use</a>
+      <a href="/privacy" aria-current="page">Privacy</a>
+      <a href="/support">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <img src="/assets/buzz-icon.svg" alt="" width="104" height="104">
+      <div>
+        <h1>Buzzword privacy policy</h1>
+        <p>For the Buzzword Chrome extension</p>
+      </div>
+    </div>
+  </div>
+
+  <article class="prose">
+    <p class="effective"><em>Effective Nov. 24, 2026</em></p>
+
+    <p>Buzzword is a Chrome extension that checks Google Docs drafts against AP style and The Burlingame B's house style. It was made for the staff of The Burlingame B.</p>
+
+    <h2>What Buzzword reads</h2>
+    <p>When you click <strong>Check whole story</strong> or <strong>Check selection</strong>, Buzzword reads the text of the Google Doc you have open through the Google Docs API. If Google Docs doesn't show Buzzword your selection, <strong>Check selection</strong> reads the text you just copied, and only when you click the button.</p>
+
+    <h2>Where your text goes</h2>
+    <ul>
+      <li>Buzzword checks the text <strong>inside your browser</strong>, using rules only (no AI).</li>
+      <li>The text is sent to <strong>only one place: Google's Docs API</strong>, to add suggestions to the same document.</li>
+      <li>Buzzword has <strong>no server of its own</strong>. It never sends your text, your name or your email anywhere else, and it does not sell or share any data.</li>
+      <li>The panel loads its fonts from Google Fonts. That request does not include any document text.</li>
+    </ul>
+
+    <h2>What Buzzword saves</h2>
+    <p>Buzzword saves these in your browser's extension storage:</p>
+    <ul>
+      <li>Your Buzzword settings.</li>
+      <li>For each document you check: the document's ID, the IDs of suggestions Buzzword made, and short <strong>hashes</strong> of the flags you rejected or ignored, so they aren't suggested again. A hash cannot be turned back into your text.</li>
+      <li>Counts of how many suggestions were accepted or rejected for each rule.</li>
+    </ul>
+    <p>Buzzword never saves the text of your documents. To delete everything Buzzword has saved, remove the extension from Chrome.</p>
+
+    <h2>Google sign-in</h2>
+    <p>Buzzword uses Chrome's Google sign-in to get permission to read and suggest edits to your Google Docs (the <code>documents</code> scope). Chrome keeps the sign-in token, and Buzzword only uses it to call the Google Docs API.</p>
+    <p>Buzzword's use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>Clipboard</h2>
+    <p><strong>Show in doc</strong> copies the flagged phrase so you can find it with Find (Cmd+F or Ctrl+F). <strong>Check selection</strong> may read the text you copied, as described above. Buzzword uses the clipboard only when you click one of these buttons.</p>
+
+    <h2>Changes and contact</h2>
+    <p>If this policy changes, the new version will be posted here with a new date. For questions, open an issue at <a href="https://github.com/jasqnlu/Buzzword/issues">https://github.com/jasqnlu/Buzzword/issues</a>.</p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <img class="logo-b" src="/assets/burlingame-b-logo.jpg" alt="The Burlingame B logo" width="72" height="72">
+    <div>
+      <p>Made by a student on the staff of The Burlingame B, Burlingame High School's student newspaper.</p>
+      <p class="fine">Buzzword is not made by, affiliated with or endorsed by The Associated Press.</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/support">Support</a>
+      <a href="https://github.com/jasqnlu/Buzzword">Source code</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
